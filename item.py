@@ -1,4 +1,4 @@
-from updatable import *
+from updatable import Updatable
 class Item(Updatable):
     def __init__(self, name, sellIn, quality):
         self.name = name
@@ -21,4 +21,4 @@ if __name__ == "__main__":
 
     sandra = Item("Sandra","52","10")
     assert sandra.getQuality() == "10", "Eh, mi Quality es superior a eso!"
-    assert sandra.updateQuality() == None, "Sólo queria actualizar.."
+    assert sandra.update_quality() == None, "Sólo queria actualizar.."

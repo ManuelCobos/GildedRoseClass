@@ -1,9 +1,13 @@
 class Updatable():
-    def updateQuality(self):
+
+
+    def update_quality(self):
+    
         pass
 
 
 if __name__ == "__main__":
     
+
     toni = Updatable()
-    assert toni.updateQuality() == None, "help!"
+    assert toni.update_quality() == None, "help!"
