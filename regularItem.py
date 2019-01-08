@@ -6,9 +6,9 @@ class RegularItem(Item, Updatable):
 
     def update_quality(self):
         if self.sellIn > 0:
-            self.quality = self.quality - 1
-        else:
-            self.quality = self.quality -2
+            self.quality -= 1 
+        else: 
+            self.quality -= 2
         
         if self.quality < 0:
             self.quality = 0
