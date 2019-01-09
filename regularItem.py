@@ -4,6 +4,9 @@ from updatable import Updatable
 
 class RegularItem(Item, Updatable):
 
+    def setSell_in(self):
+        self.sell_in = self.sell_in - 1
+
     def setQuality(self, value):
         if self.quality + value > 50:
             self.quality = 50
@@ -19,6 +22,7 @@ class RegularItem(Item, Updatable):
             self.setQuality(-1)
         else: 
             self.setQuality(-2)
+        self.setSell_in()
         
 
 # Casos test para las diferentes actualizaciones.
