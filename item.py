@@ -1,21 +1,21 @@
 class Item():
 
-    def __init__(self, name, sellIn, quality):
+    def __init__(self, name, sell_in, quality):
         self.name = name
-        self.sellIn = sellIn
+        self.sell_in = sell_in
         self.quality = quality 
 
     def getName(self):
         return self.name
 
-    def getSellIn(self):
-        return self.sellIn
+    def getsell_in(self):
+        return self.sell_in
 
     def getQuality(self):
         return self.quality
 
     def __repr__(self):
-        return '%s, %s, %s' % (self.getName(), self.getSellIn(), self.getQuality())
+        return '%s, %s, %s' % (self.getName(), self.getsell_in(), self.getQuality())
 
 if __name__ == "__main__":
 

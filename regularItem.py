@@ -18,7 +18,7 @@ class RegularItem(Item, Updatable):
         
 
     def update_quality(self):
-        if self.sellIn > 0:
+        if self.sell_in > 0:
             self.setQuality(-1)
         else: 
             self.setQuality(-2)
@@ -28,7 +28,7 @@ class RegularItem(Item, Updatable):
 # Casos test para las diferentes actualizaciones.
 if __name__ == "__main__":
     
-    # Pato = Name, SellIn, Quality
+    # Pato = Name, sell_in, Quality
     pato = RegularItem("Pato", 100, 10)
     pato.update_quality()
     assert pato.getQuality() == 9
@@ -45,3 +45,6 @@ if __name__ == "__main__":
     pepota.update_quality()
     assert pepota.getQuality() == 50
 
+    pepito = RegularItem("Pepito", 100, 10)
+    pepito.setSell_in()
+    assert pepito.getsell_in() == 99, "Error updating Sell In value"
